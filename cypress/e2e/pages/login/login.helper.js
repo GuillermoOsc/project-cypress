@@ -13,4 +13,4 @@ export class loginHelper {
     static clickOnLoginButton(){
         loginElements.elements.loginButton.click();
     }
-}
+} 

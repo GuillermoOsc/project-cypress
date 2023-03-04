@@ -11,7 +11,13 @@ export class CommonPageHelper {
     }
 
     static clickOnLoginOption(){
+        cy.wait(2000)
         CommonPageElements.topMenu.login.click();
+    }
+
+
+    static verifySignedUser(username){
+        CommonPageElements.topMenu.nameOfUser.should("contain", `Welcome ${username}`);
     }
 
     static generateRandomString = (length = 10) => {
